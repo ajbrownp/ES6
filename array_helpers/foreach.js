@@ -1,0 +1,47 @@
+var colors = ['blue', 'red', 'green', 'orange', 'brown'];
+
+// classic ES5 code to iterate the array colors
+// for (var i = 0; i < colors.length; i ++) {
+//   console.log(colors[i]);
+// }
+
+
+// ES6 way to iterate thru colors array
+colors.forEach(function(color){
+  // console.log(color);
+});
+
+//EXAMPLE 1
+var numbers = [1,2,3,4,5];
+var sum = 0;
+numbers.forEach(function(number){
+    sum += number;
+});
+// console.log(sum); 15
+
+// passing the iterator function as an external fuction
+function adder(number){
+    sum += number;
+}
+numbers.forEach(adder);
+// console.log(sum);
+
+///////////////////////////////////////////////////////////////////
+////////    EXERCISE 1      ///////////////////////////////////////
+///////////////////////////////////////////////////////////////////
+
+// The array below contains an array of objects, each of which is a representation of an image.  Using the forEach helper, calculate the area of each image and store it in a new array called 'areas'.  The area of an image can be calculated as 'image.height * image.width'.
+
+var images = [
+  { height: 10, width: 30 },
+  { height: 20, width: 90 },
+  { height: 54, width: 32 }
+];
+var areas = [];
+var imgArea = 0;
+
+images.forEach(function(image){
+    imgArea = image.height * image.width;
+    areas.push(imgArea);
+});
+console.log(areas);
